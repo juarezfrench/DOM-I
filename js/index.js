@@ -103,14 +103,3 @@ footer.textContent=siteContent.footer.copyright
 
 
 
-
-
-
-
-
-// featuresTitle.innerText=siteContent["main-content"]["features-h4"] 
-
-// let featuresText = document.querySelector(".main-content",".top-content", ".text-content", "p")
-// console.log('index.js -> %cfeaturesContent:', 'color: maroon', featuresText)
-
-// // featuresText.innerText=siteContent["main-content"]["features-content"]  
