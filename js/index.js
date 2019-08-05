@@ -40,3 +40,66 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+let navItem = document.querySelectorAll("a");
+// console.log('index.js -> %cnavItem:', 'color: blue', navItem)
+
+navItem.forEach((item,i) => {
+  (item.textContent = Object.values(siteContent.nav)[i])
+  })
+
+  let slogan = document.querySelector(".cta-text h1")
+  // console.log('index.js -> %cctaText:', 'color: indigo',slogan)
+
+  slogan.textContent=siteContent.cta.h1
+
+  let ctaImage = document.querySelector("#cta-img")
+  console.log('index.js -> %cctaImage:', 'color: red', ctaImage)
+  ctaImage.setAttribute('src', siteContent["cta"]["img-src"])
+
+  let ctaButton = document.querySelector("button")
+  // console.log('index.js -> %cctaButton:', 'color: violet', ctaButton)
+  ctaButton.textContent=siteContent.cta.button  
+
+
+let middleImage= document.querySelector("#middle-img")
+//console.log('index.js -> %cmiddleImage:', 'color: blue', middleImage)
+middleImage.setAttribute('src', siteContent["main-content"]["middle-img-src"])
+
+
+
+let contactInfo = document.querySelectorAll('.contact > *')
+//console.log('index.js -> %ccontactInfo:', 'color: green', contactInfo)
+contactInfo.forEach((item,i) => {
+  (item.textContent = Object.values(siteContent.contact)[i])
+  })
+
+
+
+
+let titles = document.querySelectorAll("h4");
+console.log('index.js -> %ctitles:', 'color: purple', titles)
+
+titles[0].textContent=siteContent["main-content"]["features-h4"]
+titles[1].textContent=siteContent["main-content"]["about-h4"]
+titles[2].textContent=siteContent["main-content"]["services-h4"]
+titles[3].textContent=siteContent["main-content"]["product-h4"]
+titles[4].textContent=siteContent["main-content"]["vision-h4"]
+
+
+let contents = document.querySelectorAll("p");
+console.log('index.js -> %cContents:', 'color: orange', contents)
+
+contents[0].textContent=siteContent["main-content"]["features-content"]
+contents[1].textContent=siteContent["main-content"]["about-content"]
+contents[2].textContent=siteContent["main-content"]["services-content"]
+contents[3].textContent=siteContent["main-content"]["product-content"]
+contents[4].textContent=siteContent["main-content"]["vision-content"]
+
+
+let footer = document.querySelector("footer")
+footer.textContent=siteContent.footer.copyright
+
+
+
+
