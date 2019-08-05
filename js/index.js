@@ -63,13 +63,13 @@ navItem.forEach((item,i) => {
 
 
 let middleImage= document.querySelector("#middle-img")
-console.log('index.js -> %cmiddleImage:', 'color: blue', middleImage)
+//console.log('index.js -> %cmiddleImage:', 'color: blue', middleImage)
 middleImage.setAttribute('src', siteContent["main-content"]["middle-img-src"])
 
 
 
 let contactInfo = document.querySelectorAll('.contact > *')
-console.log('index.js -> %ccontactInfo:', 'color: green', contactInfo)
+//console.log('index.js -> %ccontactInfo:', 'color: green', contactInfo)
 contactInfo.forEach((item,i) => {
   (item.textContent = Object.values(siteContent.contact)[i])
   })
@@ -77,5 +77,40 @@ contactInfo.forEach((item,i) => {
 
 
 
+let titles = document.querySelectorAll("h4");
+console.log('index.js -> %ctitles:', 'color: purple', titles)
+
+titles[0].textContent=siteContent["main-content"]["features-h4"]
+titles[1].textContent=siteContent["main-content"]["about-h4"]
+titles[2].textContent=siteContent["main-content"]["services-h4"]
+titles[3].textContent=siteContent["main-content"]["product-h4"]
+titles[4].textContent=siteContent["main-content"]["vision-h4"]
 
 
+let contents = document.querySelectorAll("p");
+console.log('index.js -> %cContents:', 'color: orange', contents)
+
+contents[0].textContent=siteContent["main-content"]["features-content"]
+contents[1].textContent=siteContent["main-content"]["about-content"]
+contents[2].textContent=siteContent["main-content"]["services-content"]
+contents[3].textContent=siteContent["main-content"]["product-content"]
+contents[4].textContent=siteContent["main-content"]["vision-content"]
+
+
+let footer = document.querySelector("footer")
+footer.textContent=siteContent.footer.copyright
+
+
+
+
+
+
+
+
+
+// featuresTitle.innerText=siteContent["main-content"]["features-h4"] 
+
+// let featuresText = document.querySelector(".main-content",".top-content", ".text-content", "p")
+// console.log('index.js -> %cfeaturesContent:', 'color: maroon', featuresText)
+
+// // featuresText.innerText=siteContent["main-content"]["features-content"]  
