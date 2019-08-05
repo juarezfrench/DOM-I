@@ -57,7 +57,12 @@ navItem.forEach((item,i) => {
   console.log('index.js -> %cctaImage:', 'color: red', ctaImage)
   logo.setAttribute('src', siteContent["cta"]["img-src"])
 
-  
+  let ctaButton = document.querySelector("button")
+  console.log('index.js -> %cctaButton:', 'color: violet', ctaButton)
+  ctaButton.textContent=siteContent.cta.button  
+
+
+
  
 
 
