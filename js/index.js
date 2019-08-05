@@ -42,28 +42,38 @@ let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 let navItem = document.querySelectorAll("a");
-console.log('index.js -> %cnavItem:', 'color: blue', navItem)
+// console.log('index.js -> %cnavItem:', 'color: blue', navItem)
 
 navItem.forEach((item,i) => {
   (item.textContent = Object.values(siteContent.nav)[i])
   })
 
   let slogan = document.querySelector(".cta-text h1")
-  console.log('index.js -> %cctaText:', 'color: indigo',slogan)
+  // console.log('index.js -> %cctaText:', 'color: indigo',slogan)
 
   slogan.textContent=siteContent.cta.h1
 
   let ctaImage = document.querySelector("#cta-img")
   console.log('index.js -> %cctaImage:', 'color: red', ctaImage)
-  logo.setAttribute('src', siteContent["cta"]["img-src"])
+  ctaImage.setAttribute('src', siteContent["cta"]["img-src"])
 
   let ctaButton = document.querySelector("button")
-  console.log('index.js -> %cctaButton:', 'color: violet', ctaButton)
+  // console.log('index.js -> %cctaButton:', 'color: violet', ctaButton)
   ctaButton.textContent=siteContent.cta.button  
 
 
+let middleImage= document.querySelector("#middle-img")
+console.log('index.js -> %cmiddleImage:', 'color: blue', middleImage)
+middleImage.setAttribute('src', siteContent["main-content"]["middle-img-src"])
 
- 
+
+
+let contactInfo = document.querySelectorAll('.contact > *')
+console.log('index.js -> %ccontactInfo:', 'color: green', contactInfo)
+contactInfo.forEach((item,i) => {
+  (item.textContent = Object.values(siteContent.contact)[i])
+  })
+
 
 
 
